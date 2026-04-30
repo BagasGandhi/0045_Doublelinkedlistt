@@ -117,6 +117,20 @@ public:
 
     void traverse()
     {
-        
+        if (START == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
+
+        Node *current = START;
+
+        cout << "Records in ascending order of roll number are:\n";
+        while (current != NULL)
+        {
+            cout << current->no << " ";
+            current = current->next;
+        }
+        cout << endl;
     }
 };

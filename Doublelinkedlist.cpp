@@ -133,4 +133,26 @@ public:
         }
         cout << endl;
     }
+
+    void revtraverse()
+    {
+        if (START == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
+
+        Node *current = START;
+
+        while (current->next != NULL)
+            current = current->next;
+
+        cout << "Records in descending order of roll number are:\n";
+        while (current != NULL)
+        {
+            cout << current->no << " ";
+            current = current->prev;
+        }
+        cout << endl;
+    }
 };

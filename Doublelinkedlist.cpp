@@ -179,3 +179,9 @@ public:
             cout << "Record found" << endl;
     }
 };
+
+int main()
+{
+    DoubleLinkedList list;
+    char choice;
+}

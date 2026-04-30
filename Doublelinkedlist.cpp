@@ -110,5 +110,8 @@ public:
 
             current->prev->next = current->next;
         }
+
+        delete current;
+        cout << "Record with roll number " << rollNo << " deleted" << endl;
     }
 };

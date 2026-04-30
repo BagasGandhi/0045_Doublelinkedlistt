@@ -76,6 +76,10 @@ public:
 
     void deleteNode()
     {
-        
+        if (START == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
     }
 };

@@ -30,5 +30,28 @@ public:
 
         // Step 1: Allocate memory for new node
         Node *newnode = new Node();
+
+        // Step 2: Assign values to the data fields
+        newnode->no = nim;
+
+        // Step 3: Prompt for insertion if list is empty or not
+        if (START == NULL || nim <= START->no)
+        {
+            if (START != NULL && nim == START->no)
+            {
+                cout << "Duplicate roll numbers not allowed" << endl;
+                return;
+            }
+
+            newnode->next = START;
+
+            if (START != NULL)
+                START->prev = newnode;
+
+            newnode->prev = NULL;
+
+            START = newnode;
+            return;
+        }
     }
 };

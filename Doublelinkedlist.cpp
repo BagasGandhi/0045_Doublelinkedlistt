@@ -4,5 +4,14 @@ using namespace std;
 
 class Node 
 {
-    
+public:
+    int no;
+    string name;
+    Node *next;
+    Node *prev; 
+};
+
+class DoubleLinkedList
+{
+
 };

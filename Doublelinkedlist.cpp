@@ -158,6 +158,10 @@ public:
 
     void search()
     {
-        
+        if (START == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
     }
 };

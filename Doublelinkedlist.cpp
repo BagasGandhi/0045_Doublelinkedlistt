@@ -53,5 +53,24 @@ public:
             START = newnode;
             return;
         }
+
+        // Step 4: Locate the node before the point of insertion
+        Node *current = START;
+        while (current->next != NULL && current->next->no < nim)
+            current = current->next;
+
+        if (current->next != NULL && current->next->no == nim)
+        {
+            cout << "Duplicate roll numbers not allowed" << endl;
+            return;
+        }
+
+        newnode->next = current->next;
+
+        if (current->next != NULL)
+            current->next->prev = newnode;
+
+        newnode->prev = current;
+        current->next = newnode;
     }
 };
